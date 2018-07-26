@@ -121,8 +121,8 @@ set(gca,'linewidth',1.5, 'fontweight','bold')
     flag=1;
 %     v=[-54.4909, 5.8246, -27.0000, 27.0000]; %axes scale
     [xL,yL, devL]=cropdata2new(xL,yL,devL, flag,v,size,type, biomechid);
-%     [minxL,minyL,maxdevL,devareaL,areaL, CxL,CyL]...
-%         =TKA_Area(xL, yL, devL, biomechid, flag,v,c,side, LOI,size,femsize,pathname2);
+    [minxL,minyL,maxdevL,devareaL,areaL, CxL,CyL]...
+        =TKA_Area(xL, yL, devL, biomechid, flag,v,c,side, LOI,size,femsize,pathname2);
     flag=2;
         cd(currentfolder)
 
@@ -132,8 +132,8 @@ set(gca,'linewidth',1.5, 'fontweight','bold')
     x=[xL;xR];
     y=[yL;yR];
     dev=[devL;devR];
-%     [minxR,minyR,maxdevR,devareaR,areaR, CxR,CyR]...
-%         =TKA_Area(xR, yR, devR, biomechid, flag,v,c,side, LOI,size,femsize,pathname2);
+     [minxR,minyR,maxdevR,devareaR,areaR, CxR,CyR]...
+         =TKA_Area(xR, yR, devR, biomechid, flag,v,c,side, LOI,size,femsize,pathname2);
     %% Plot the entire deviation map
 h=figure;
 scatter(x,y,[],dev,'.')
